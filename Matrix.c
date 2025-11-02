@@ -18,7 +18,7 @@
 struct matrix_st{
 	size_t rows;
 	size_t cols;
-	gloat *data;
+	float *data;
 }
 //create new maxtrix
 Matrix mat_create(size_t rows, size_t cols){
@@ -58,17 +58,17 @@ void mat_init(Matrix m, const float data[]){
 
 }
 //single cell
-Status mat_set_cell(Matrix m, flat value, size_t row, size_t col){
-	if(!m || row < 1 || row > m->rows) return badR;
-	if(col<1 || col > m->cols) return badC;
+Status mat_set_cell(Matrix m, float value, size_t row, size_t col){
+	if(!m || row < 1 || row > m->rows) return BadRowNumber;
+	if(col<1 || col > m->cols) return BadColNumber;
 	
 	m->data[(row - 1) * m->cols + (col - 1)] = value;
 	return Success;
 
 }
 Status mat_get_cell(const Matrix m, float *out, size_t row, size_t col){
-	if(!m || row < 1 || row > m->rows) return badR;
-	if (col < 1 || col > m->cols) return badC;
+	if(!m || row < 1 || row > m->rows) return BadRowNumber;
+	if (col< 1 || col > m->cols) return BadColNumber;
 
 	*out = m->data[(row - 1) * m-> cols + (col - 1];
 	return Success
@@ -77,7 +77,7 @@ Status mat_get_cell(const Matrix m, float *out, size_t row, size_t col){
 //full row
 Status mat_set_row(Matrix m, const float arr[], size_t row) {
 	if (!m || row < 1 || row > m->rows)
-	return badR;
+	return BadRowNumber;
 	size_t start = (row - 1) * m->cols;
 	for (size_t j = 0; j < m->cols; j++) {
 		m->data[start + j] = arr[j];
@@ -87,14 +87,13 @@ Status mat_set_row(Matrix m, const float arr[], size_t row) {
 
 // get a full row
 Status mat_get_row(const Matrix m, float arr[], size_t row) {
-	if (!m || row < 1 || row > m->rows) return badR;
+	if (!m || row < 1 || row > m->rows) return BadRowNumber;
 	size_t start = (row - 1) * m->cols;
 	for (size_t j = 0; j < m->cols; j++) {
 		arr[j] = m->data[start + j];
 	}
 	return Success;
 }
-
 // multiply all elements by a scalar
 void mat_scalar_mult(Matrix m, float value) {
 	if (!m) return;
@@ -126,7 +125,7 @@ bool mat_equals(const Matrix m1, const Matrix m2) {
 	
 	size_t total = m1->rows * m1->cols;
 	for (size_t i = 0; i < total; i++) {
-		if (m1->data[i] != m2->data[i] return false;
+		if (m1->data[i] != m2->data[i]) return false;
 	}
 	return true;
 }

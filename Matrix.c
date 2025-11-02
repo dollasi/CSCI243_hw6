@@ -175,30 +175,5 @@ void mat_print(const Matrix m, FILE *stream) {
 			fprintf(stream, "%8.3f", m->data[(i - 1) * m->cols + (j - 1)]);
 		}
 	fputc('\n', stream);
-
 	}
 }
-
-//*
-Matrix mat_duplicate(){}
-
-bool mat_equals(){}
-
-void mat_scalar_mult(){}
-
-Matrix mat_mult(){}
-
-Status mat_get_cell(){}
-
-Status mat_get_row(){}
-
-Status mat_set_cell(){}
-
-Status mat_set_row(){}
-
-Matrix mat_transpose(){}
-
-void mat_print(){}
-
-
-// halloween riddle ans: a BOOlean!

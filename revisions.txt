@@ -1,0 +1,47 @@
+commit a996a9c85846f99de572397a51f6d0a1382da1e6
+Author: Alexandria Lynne Jones <alj5312@rit.edu>
+Date:   Sat Nov 1 23:28:19 2025 -0400
+
+    forgot to add ; after status func
+
+commit 5d2f33eb929b741f341dab4f78e7b9a8f6623e74
+Author: Alexandria Lynne Jones <alj5312@rit.edu>
+Date:   Sat Nov 1 23:21:57 2025 -0400
+
+    debugging syntax
+
+commit b74721e95ac99dfa0d0d150f0526730f810d0bea
+Author: Alexandria Lynne Jones <alj5312@rit.edu>
+Date:   Sat Nov 1 23:11:13 2025 -0400
+
+    cleaned up unused code that was commented
+
+commit bf8982b24d57f0891abf0db31016ae6da907433f
+Author: Alexandria Lynne Jones <alj5312@rit.edu>
+Date:   Sat Nov 1 23:08:25 2025 -0400
+
+    finished the files
+
+commit c02293f12eec8eaf8c85dec3f646d7576783544c
+Author: Alexandria Lynne Jones <alj5312@rit.edu>
+Date:   Sat Nov 1 18:58:46 2025 -0400
+
+    wrote single cases for set and get
+
+commit b3cdd84123305ee40d66b81ff0042826bd3fb0e6
+Author: Alexandria Lynne Jones <alj5312@rit.edu>
+Date:   Sat Nov 1 18:37:15 2025 -0400
+
+    created mat_destroy and create
+
+commit f2479904043321da9785ac7d74770e3d7e232a89
+Author: Alexandria Lynne Jones <alj5312@rit.edu>
+Date:   Fri Oct 31 10:39:20 2025 -0400
+
+    added structs, matrix methods, and statuses (bare bones)
+
+commit 04aab698d312710fd3b6fc63787fe2a0b4863833
+Author: Alexandria Lynne Jones <alj5312@rit.edu>
+Date:   Mon Oct 27 19:34:13 2025 -0400
+
+    added initial files

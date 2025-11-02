@@ -19,7 +19,7 @@ struct matrix_st{
 	size_t rows;
 	size_t cols;
 	float *data;
-}
+};
 //create new maxtrix
 Matrix mat_create(size_t rows, size_t cols){
 	if (rows == 0 || cols == 0) return NULL;
@@ -70,8 +70,8 @@ Status mat_get_cell(const Matrix m, float *out, size_t row, size_t col){
 	if(!m || row < 1 || row > m->rows) return BadRowNumber;
 	if (col< 1 || col > m->cols) return BadColNumber;
 
-	*out = m->data[(row - 1) * m-> cols + (col - 1];
-	return Success
+	*out = m->data[(row - 1) * m-> cols + (col - 1)];
+	return Success;
 
 }
 //full row
